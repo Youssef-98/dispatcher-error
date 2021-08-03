@@ -10,9 +10,9 @@
 (define-resource publisher ()
   :class (s-prefix "ext:Publisher")
   :properties `((:name :string ,(s-prefix "schema:name")))
-  :has-many ((book :via ,(s-prefix "ext:publisher")
-                   :inverse t
-                   :as "books"))
+  :has-many `((book :via ,(s-prefix "ext:publisher")
+                    :inverse t
+                    :as "books"))
   :resource-base (s-url "https://mu.semte.ch/examples/publishers/")
   :on-path "publishers")
 
