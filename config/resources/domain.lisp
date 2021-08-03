@@ -7,7 +7,7 @@
 
 ;; Describe your resources here
 
-(define-resource publisher()
+(define-resource publisher ()
   :class (s-prefix "ext:Publisher")
   :properties `((:name :string ,(s-prefix "schema:name")))
   :has-many ((book :via ,(s-prefix "ext:publisher")
@@ -16,7 +16,7 @@
   :resource-base (s-url "https://mu.semte.ch/examples/publishers/")
   :on-path "publishers")
 
-(define-resource book()
+(define-resource book ()
   :class (s-prefix "schema:Book")
   :properties `((:title :string ,(s-prefix "schema:title"))
                 (:isbn :string ,(s-prefix "schema:isbn")))
